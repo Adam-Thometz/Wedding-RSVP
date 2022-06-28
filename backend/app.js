@@ -10,20 +10,29 @@ const app = express();
 app.use(cors());
 app.use(express.json());
 
-app.post('/', async (req, res, next) => {
+app.post('/check', async (req, res, next) => {
   try {
-    const guest = await Guest.markGuest(req.body);
+    debugger;
+    const guest = await Guest.checkGuest(req.body);
+    res.status(200).json({ guest });
+  } catch (err) {
+    return next(err);
+  };
+});
+
+app.post('/not-coming', async (req, res, next) => {
+  try {
+    const guest = await Guest.markNotComing(req.body);
     return res.json({ guest });
   } catch (err) {
     return next(err);
   };
 });
 
-app.get('/:firstName/:lastName/:zipcode', async (req, res, next) => {
+app.post('/coming', async (req, res, next) => {
   try {
-    debugger;
-    const isGuest = await Guest.checkGuest(req.params);
-    return res.json({ success: isGuest });
+    const guest = await Guest.markComing(req.body);
+    return res.json({ guest });
   } catch (err) {
     return next(err);
   };

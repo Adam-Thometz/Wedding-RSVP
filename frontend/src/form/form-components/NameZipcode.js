@@ -1,16 +1,24 @@
-import React, { useContext } from 'react';
+import React, { useContext, useState } from 'react';
 import useTextbox from '../../_hooks/useTextbox';
 import GuestContext from '../../_utils/GuestContext';
+import GuestNotFound from '../messages/GuestNotFound';
+import Api from '../../api';
 
 const NameZipcode = () => {
-  const { setGuestInfo } = useContext(GuestContext);
+  const { setGuestInfo, setPage } = useContext(GuestContext);
+  const [error, setError] = useState(false)
   const [formData, setFormData] = useTextbox({
     firstName: '',
     lastName: '',
     zipcode: ''
   });
 
-  const nextPage = () => setGuestInfo(formData);
+  const nextPage = async e => {
+    e.preventDefault();
+    const guest = await Api.checkGuest(formData);
+    guest ? setPage(1) : setError(true);
+    setGuestInfo(guest => ({ ...guest, ...formData }))
+  };
 
   return (
     <div className='NameZipcode'>
@@ -42,6 +50,7 @@ const NameZipcode = () => {
         onChange={setFormData}
       />
       <button onClick={nextPage}>Next</button>
+      {error ? <GuestNotFound /> : null}
     </div>
   );
 };

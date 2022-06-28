@@ -4,7 +4,6 @@ const db = require('./db');
 
 class Guest {
   static async checkGuest({ firstName, lastName, zipcode }) {
-    debugger;
     const result = await db.query(`
       SELECT first_name, last_name, zipcode
       FROM guests
@@ -12,16 +11,32 @@ class Guest {
     `, [firstName, lastName, zipcode]);
 
     const guest = result.rows[0];
-
-    return !!guest;
+    return guest;
   };
 
-  static async markGuest({ firstName, lastName, zipcode, isComing, plusOne, diet, email }) {
+  static async markNotComing({ firstName, lastName, zipcode, isComing }) {
+    const result = await db.query(`
+      UPDATE guests
+      SET is_coming = $1,
+      WHERE first_name = $2 AND
+            last_name = $3 AND
+            zipcode = $4
+      RETURNING first_name AS "firstName",
+                last_name AS "lastName",
+                zipcode,
+                is_coming AS "isComing",
+    `, [isComing, firstName, lastName, zipcode]);
+
+    const guest = result.rows[0];
+    return guest;
+  };
+
+  static async markComing({ firstName, lastName, zipcode, isComing, plusOne, diet, email }) {
     const result = await db.query(`
       UPDATE guests
       SET is_coming = $1,
           plus_one = $2,
-          diet = $3.
+          diet = $3,
           email = $4
       WHERE first_name = $5 AND
             last_name = $6 AND

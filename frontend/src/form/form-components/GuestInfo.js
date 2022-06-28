@@ -1,7 +1,10 @@
-import React, { useState } from 'react';
+import React, { useContext, useState } from 'react';
+import Api from '../../api';
 import useTextbox from '../../_hooks/useTextbox';
+import GuestContext from '../../_utils/GuestContext';
 
 const GuestInfo = () => {
+  const { guestInfo, setGuestInfo, setPage } = useContext(GuestContext);
   const [hasPlusOne, setHasPlusOne] = useState(false);
   const [formData, setFormData] = useTextbox({
     plusOne: '',
@@ -10,6 +13,13 @@ const GuestInfo = () => {
   });
 
   const handlePlusOne = e => setHasPlusOne(e.target.value);
+  const handleSetGuestInfo = async e => {
+    e.preventDefault();
+    debugger;
+    await Api.markComing({ ...guestInfo, ...formData });
+    setGuestInfo(guest => ({ ...guest, ...formData }));
+    setPage(3);
+  };
 
   return (
     <div className='GuestInfo'>
@@ -38,6 +48,8 @@ const GuestInfo = () => {
         <label htmlFor='email'>Email: </label>
         <input type='email' id='email' name='email' value={formData.email} onChange={setFormData} />
       </div>
+
+      <button onClick={handleSetGuestInfo}>Next</button>
     </div>
   )
 }

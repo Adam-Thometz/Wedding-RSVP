@@ -1,13 +1,24 @@
 import React, { useState, useContext } from 'react';
+import Api from '../../api';
 import GuestContext from '../../_utils/GuestContext';
+import IsNotAttending from '../messages/IsNotAttending';
 
-const Response = ({ setPage }) => {
-  const { guestInfo, setIsComing } = useContext(GuestContext);
-  const [answer, setAnswer] = useState(null);
+const Response = () => {
+  const { guestInfo, setGuestInfo, setMessage, setPage } = useContext(GuestContext);
+  const [isComing, setIsComing] = useState('');
 
-  const handleSetAnswer = e => setAnswer(e.target.value);
+  const handleSetIsComing = e => setIsComing(e.target.value);
 
-  const nextPage = () => setIsComing(answer);
+  const nextPage = async e => {
+    e.preventDefault();
+    setGuestInfo(guest => ({ ...guest, isComing }));
+    if (isComing === 'yes') {
+      setPage(2)
+    } else {
+      setMessage(<IsNotAttending />);
+      await Api.markNotComing(guestInfo);
+    }
+  };
   const prevPage = () => setPage(0);
 
   return (
@@ -18,18 +29,18 @@ const Response = ({ setPage }) => {
         type='radio'
         id='yes'
         name='response'
-        value={true}
-        onChange={handleSetAnswer}
+        value='yes'
+        onChange={handleSetIsComing}
       />
       <label htmlFor='no'>No</label>
       <input
         type='radio'
         id='no'
         name='response'
-        value={false}
-        onChange={handleSetAnswer}
+        value='no'
+        onChange={handleSetIsComing}
       />
-      <button onClick={nextPage} disabled={answer === null}>Next</button>
+      <button onClick={nextPage} disabled={isComing === ''}>Next</button>
       <button onClick={prevPage}>Back</button>
     </div>
   );

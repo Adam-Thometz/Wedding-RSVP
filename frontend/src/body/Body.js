@@ -6,7 +6,7 @@ const Body = () => {
       <section>
         <h2>Details</h2>
         <article>
-          In numerology, 22 is considered to be a master number, a symbol of creativity and power. Let’s celebrate as if the Great Depression hasn't happened yet! Put on your glad rags and sparkly outfits to celebrate the marriage of Melody and Adam with a roaring 20’s themed cocktail wedding reception! The actual wedding will be a small ceremony with our parents, siblings, a bestman from each side, and a bridesmaid from each side, but we definitely want to celebrate this special event with our friends! 
+          In numerology, 22 is considered to be a master number, a symbol of creativity and power. Let’s celebrate as if the Great Depression hasn't happened yet! Put on your glad rags and sparkly outfits to celebrate the marriage of Melody and Adam with a roaring 20’s themed cocktail wedding reception! 
         </article>
       </section>
       <section>

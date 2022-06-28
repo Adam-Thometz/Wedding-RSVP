@@ -13,60 +13,36 @@ const RSVPForm = () => {
   const [page, setPage] = useState(0);
   const [message, setMessage] = useState(null);
 
-  const [guestInfo, setGuestInfo] = useState({});
-  const [isComing, setIsComing] = useState(null);
-  const [plusOne, setPlusOne] = useState('');
-  const [diet, setDiet] = useState('');
-  const [email, setEmail] = useState('');
-
-  useEffect(() => {
-    async function checkGuest() {
-      debugger
-      const isGuest = await Api.checkGuest(guestInfo);
-      isGuest ? setPage(1) : setMessage(<GuestNotFound />);
-    };
-
-    if (Object.keys(guestInfo).length) checkGuest();
-  }, [guestInfo]);
-  
-  useEffect(() => {
-    async function checkIsComing() {
-      if (isComing === true) {
-        setPage(2);
-      } else if (isComing === false) {
-        setMessage(<IsNotAttending />);
-        await Api.markGuest({ guestInfo, isComing });
-      };
-    };
-
-    if (isComing !== null) checkIsComing();
-  }, [guestInfo, isComing]);
+  const [guestInfo, setGuestInfo] = useState({
+    firstName: '',
+    lastName: '',
+    zipcode: '',
+    isComing: '',
+    plusOne: '',
+    diet: '',
+    email: ''
+  });
   
   useEffect(() => {
     async function addComingGuest() {
-      // TODO: Implement API to make this work
-      await Api.markGuest({ guestInfo, isComing, plusOne, diet, email });
-      setPage(3);
-    }
-    if (email.length) addComingGuest();
-  }, [guestInfo, isComing, plusOne, diet, email]);
+      const { email } = guestInfo;
+      if (email) {
+        await Api.markGuest({ guestInfo });
+        setPage(3);
+      };
+    };
+    if (page === 2) addComingGuest();
+  }, [guestInfo, page]);
 
   const pages = [
     <NameZipcode  />,
-    <Response setPage={setPage} />,
-    <GuestInfo setPage={setPage} />,
-    <IsAttending setPage={setPage} />
+    <Response />,
+    <GuestInfo />,
+    <IsAttending />
   ];
 
   return (
-    <GuestContext.Provider value={{
-      message, setMessage,
-      guestInfo, setGuestInfo,
-      isComing, setIsComing,
-      plusOne, setPlusOne,
-      diet, setDiet,
-      email, setEmail
-    }}>
+    <GuestContext.Provider value={{ guestInfo, setGuestInfo, setPage, setMessage }}>
       <form>
         {message ? message : pages[page]}
       </form>

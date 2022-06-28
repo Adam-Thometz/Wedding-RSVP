@@ -3,24 +3,28 @@ import axios from 'axios';
 const BASE_URL = process.env.REACT_APP_BASE_URL || 'http://localhost:3001';
 
 class Api {
-  static async request(endpoint, data = {}, method = 'get') {
+  static async request(endpoint, data) {
     const url = `${BASE_URL}/${endpoint}`;
-    const params = method === 'get' ? data : {};
     try {
-      return (await axios({ url, data, method, params })).data;
+      const res = await axios.post(url, data)
+      return res.data;
     } catch (e) {
       throw e.response.data.error.message;
     };
   };
   
-  static async checkGuest({ firstName, lastName, zipcode }) {
-    debugger;
-    const res = await this.request(`${firstName}/${lastName}/${zipcode}`);
-    return res.success;
+  static async checkGuest(data) {
+    const res = await this.request('check', data);
+    return res.guest;
   };
 
-  static async markGuest(data) {
-    const res = await this.request('', data, 'post');
+  static async markNotComing(data) {
+    const res = await this.request('not-coming', data);
+    return res.guest;
+  };
+
+  static async markComing(data) {
+    const res = await this.request('coming', data);
     return res.guest;
   };
 };

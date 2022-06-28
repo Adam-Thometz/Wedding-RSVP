@@ -2,8 +2,8 @@ import React, { useContext } from 'react';
 import GuestContext from '../../_utils/GuestContext';
 
 const IsAttending = () => {
-  const { plusOne } = useContext(GuestContext);
-  const plusOneFirstName = plusOne.split(' ')[0];
+  const { guestInfo } = useContext(GuestContext);
+  const plusOneFirstName = guestInfo.plusOne.split(' ')[0];
   return (
     <section className='IsAttending'>
       <p>You're in! We look forward to seeing you{plusOneFirstName ? ` and ${plusOneFirstName}` : ''} there! If anything changes, whether you can't make it, {plusOneFirstName ? 'decide to travel solo' : 'found a date'}, or discovered a weird allergy, you can come back to this site on the same device you're using now and update by October 14th! Please keep us in the loop as it helps with planning!</p>

@@ -13,7 +13,7 @@ const NameZipcode = () => {
   const nextPage = () => setGuestInfo(formData);
 
   return (
-    <div className='RSVPForm-name-address'>
+    <div className='NameZipcode'>
       <p>Before we begin, please enter your first name, last name, and the zipcode where you received your invitation so we can find you on our guest list and weed out the wedding crashers!</p>
       <label htmlFor='firstName'>First Name</label>
       <input

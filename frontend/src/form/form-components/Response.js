@@ -11,7 +11,7 @@ const Response = ({ setPage }) => {
   const prevPage = () => setPage(0);
 
   return (
-    <div className='RSVPForm-response'>
+    <div className='Response'>
       <p>Hi {guestInfo.firstName}! Great to see you here! Now, do you plan to come?</p>
       <label htmlFor='yes'>Yes</label>
       <input

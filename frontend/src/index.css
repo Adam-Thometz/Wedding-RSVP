@@ -1,0 +1,17 @@
+@font-face {
+  font-family: Grenadier;
+  src: url('./_fonts/GrenadierNF.otf');
+}
+
+@font-face {
+  font-family: DM Sans;
+  src: url('./_fonts/DMSans-Medium.ttf');
+}
+
+body {
+  color: #FFC36D;
+  background-color: #1D1D1DB2;
+  font-family: DM Sans;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}

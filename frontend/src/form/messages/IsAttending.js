@@ -1,8 +1,8 @@
 import React, { useContext } from 'react';
-import GuestContext from '../../_utils/GuestContext';
+import FormContext from '../../_utils/FormContext';
 
 const IsAttending = () => {
-  const { guestInfo } = useContext(GuestContext);
+  const { guestInfo } = useContext(FormContext);
   const plusOneFirstName = guestInfo.plusOne.split(' ')[0];
   return (
     <section className='IsAttending'>

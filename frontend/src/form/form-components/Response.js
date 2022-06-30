@@ -1,10 +1,10 @@
 import React, { useState, useContext } from 'react';
 import Api from '../../api';
-import GuestContext from '../../_utils/GuestContext';
+import FormContext from '../../_utils/FormContext';
 import IsNotAttending from '../messages/IsNotAttending';
 
 const Response = () => {
-  const { guestInfo, setGuestInfo, setMessage, setPage } = useContext(GuestContext);
+  const { guestInfo, setGuestInfo, setMessage, setPage } = useContext(FormContext);
   const [isComing, setIsComing] = useState('');
 
   const handleSetIsComing = e => setIsComing(e.target.value);

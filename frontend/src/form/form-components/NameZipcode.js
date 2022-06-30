@@ -1,13 +1,13 @@
 import React, { useContext, useState } from 'react';
 import useTextbox from '../../_hooks/useTextbox';
-import GuestContext from '../../_utils/GuestContext';
+import FormContext from '../../_utils/FormContext';
 import GuestNotFound from '../messages/GuestNotFound';
 import Api from '../../api';
 
 import './NameZipcode.css'
 
 const NameZipcode = () => {
-  const { setGuestInfo, setPage } = useContext(GuestContext);
+  const { setGuestInfo, setPage } = useContext(FormContext);
   const [error, setError] = useState(false)
   const [formData, setFormData] = useTextbox({
     firstName: '',

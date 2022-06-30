@@ -12,7 +12,6 @@ app.use(express.json());
 
 app.post('/check', async (req, res, next) => {
   try {
-    debugger;
     const guest = await Guest.checkGuest(req.body);
     res.status(200).json({ guest });
   } catch (err) {

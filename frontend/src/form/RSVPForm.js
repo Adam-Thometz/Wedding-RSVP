@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import GuestContext from '../_utils/GuestContext';
+import FormContext from '../_utils/FormContext';
 import Api from '../api';
 
 import './RSVPForm.css';
@@ -42,11 +42,11 @@ const RSVPForm = () => {
   ];
 
   return (
-    <GuestContext.Provider value={{ guestInfo, setGuestInfo, setPage, setMessage }}>
+    <FormContext.Provider value={{ guestInfo, setGuestInfo, setPage, setMessage }}>
       <form>
         {message ? message : pages[page]}
       </form>
-    </GuestContext.Provider>
+    </FormContext.Provider>
   );
 };
 

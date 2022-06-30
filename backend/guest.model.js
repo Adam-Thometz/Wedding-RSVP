@@ -17,14 +17,14 @@ class Guest {
   static async markNotComing({ firstName, lastName, zipcode, isComing }) {
     const result = await db.query(`
       UPDATE guests
-      SET is_coming = $1,
+      SET is_coming = $1
       WHERE first_name = $2 AND
             last_name = $3 AND
             zipcode = $4
       RETURNING first_name AS "firstName",
                 last_name AS "lastName",
                 zipcode,
-                is_coming AS "isComing",
+                is_coming AS "isComing"
     `, [isComing, firstName, lastName, zipcode]);
 
     const guest = result.rows[0];

@@ -1,5 +1,5 @@
 import React, { useState, useContext } from 'react';
-import Api from '../../api';
+import Api from '../../_utils/api';
 import FormContext from '../../_utils/FormContext';
 import IsNotAttending from '../messages/IsNotAttending';
 

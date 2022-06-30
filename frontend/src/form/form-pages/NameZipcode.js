@@ -2,7 +2,7 @@ import React, { useContext, useState } from 'react';
 import useTextbox from '../../_utils/useTextbox';
 import FormContext from '../../_utils/FormContext';
 import GuestNotFound from '../messages/GuestNotFound';
-import Api from '../../api';
+import Api from '../../_utils/api';
 
 import './NameZipcode.css'
 
@@ -19,7 +19,7 @@ const NameZipcode = () => {
     e.preventDefault();
     const guest = await Api.checkGuest(formData);
     guest ? setPage(1) : setNotFound(true);
-    setGuestInfo(guest => ({ ...guest, ...formData }))
+    setGuestInfo(guest => ({ ...guest, ...formData }));
   };
 
   return (

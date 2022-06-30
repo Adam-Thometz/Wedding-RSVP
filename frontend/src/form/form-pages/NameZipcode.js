@@ -8,7 +8,7 @@ import './NameZipcode.css'
 
 const NameZipcode = () => {
   const { setGuestInfo, setPage } = useContext(FormContext);
-  const [error, setError] = useState(false)
+  const [notFound, setNotFound] = useState(false)
   const [formData, setFormData] = useTextbox({
     firstName: '',
     lastName: '',
@@ -18,7 +18,7 @@ const NameZipcode = () => {
   const nextPage = async e => {
     e.preventDefault();
     const guest = await Api.checkGuest(formData);
-    guest ? setPage(1) : setError(true);
+    guest ? setPage(1) : setNotFound(true);
     setGuestInfo(guest => ({ ...guest, ...formData }))
   };
 
@@ -52,7 +52,7 @@ const NameZipcode = () => {
         onChange={setFormData}
       />
       <button onClick={nextPage}>Next</button>
-      {error ? <GuestNotFound /> : null}
+      {notFound ? <GuestNotFound /> : null}
     </div>
   );
 };

@@ -4,9 +4,9 @@ import Api from '../api';
 
 import './RSVPForm.css';
 
-import NameZipcode from './form-components/NameZipcode';
-import Response from './form-components/Response';
-import GuestInfo from './form-components/GuestInfo';
+import NameZipcode from './form-pages/NameZipcode';
+import Response from './form-pages/Response';
+import GuestInfo from './form-pages/GuestInfo';
 import IsAttending from './messages/IsAttending';
 
 const RSVPForm = () => {

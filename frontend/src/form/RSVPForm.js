@@ -1,6 +1,5 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState } from 'react';
 import FormContext from '../_utils/FormContext';
-import Api from '../api';
 
 import './RSVPForm.css';
 
@@ -12,7 +11,6 @@ import IsAttending from './messages/IsAttending';
 const RSVPForm = () => {
   const [page, setPage] = useState(0);
   const [message, setMessage] = useState(null);
-
   const [guestInfo, setGuestInfo] = useState({
     firstName: '',
     lastName: '',
@@ -23,17 +21,6 @@ const RSVPForm = () => {
     email: ''
   });
   
-  useEffect(() => {
-    async function addComingGuest() {
-      const { email } = guestInfo;
-      if (email) {
-        await Api.markGuest({ guestInfo });
-        setPage(3);
-      };
-    };
-    if (page === 2) addComingGuest();
-  }, [guestInfo, page]);
-
   const pages = [
     <NameZipcode  />,
     <Response />,

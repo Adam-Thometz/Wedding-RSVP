@@ -16,7 +16,7 @@ const Response = () => {
       setPage(2)
     } else {
       setMessage(<IsNotAttending />);
-      await Api.markNotComing(guestInfo);
+      await Api.markNotComing({ ...guestInfo, isComing });
     }
   };
   const prevPage = () => setPage(0);

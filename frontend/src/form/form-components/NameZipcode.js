@@ -4,6 +4,8 @@ import GuestContext from '../../_utils/GuestContext';
 import GuestNotFound from '../messages/GuestNotFound';
 import Api from '../../api';
 
+import './NameZipcode.css'
+
 const NameZipcode = () => {
   const { setGuestInfo, setPage } = useContext(GuestContext);
   const [error, setError] = useState(false)
@@ -23,7 +25,7 @@ const NameZipcode = () => {
   return (
     <div className='NameZipcode'>
       <p>Before we begin, please enter your first name, last name, and the zipcode where you received your invitation so we can find you on our guest list and weed out the wedding crashers!</p>
-      <label htmlFor='firstName'>First Name</label>
+      <label htmlFor='firstName'>First Name: </label>
       <input
         type='text'
         id='firstName'
@@ -32,7 +34,7 @@ const NameZipcode = () => {
         onChange={setFormData}
       />
       
-      <label htmlFor='lastName'>Last Name</label>
+      <label htmlFor='lastName'>Last Name: </label>
       <input
         type='text'
         id='lastName'
@@ -41,7 +43,7 @@ const NameZipcode = () => {
         onChange={setFormData}
       />
 
-      <label htmlFor='zipcode'>Zipcode</label>
+      <label htmlFor='zipcode'>Zipcode: </label>
       <input
         type='text'
         id='zipcode'

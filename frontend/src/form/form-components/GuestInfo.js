@@ -13,9 +13,9 @@ const GuestInfo = () => {
   });
 
   const handlePlusOne = e => setHasPlusOne(e.target.value);
+
   const handleSetGuestInfo = async e => {
     e.preventDefault();
-    debugger;
     await Api.markComing({ ...guestInfo, ...formData });
     setGuestInfo(guest => ({ ...guest, ...formData }));
     setPage(3);

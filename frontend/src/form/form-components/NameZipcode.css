@@ -1,0 +1,17 @@
+.NameZipcode {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+}
+
+.NameZipcode input {
+  width: 50%;
+  background-color: #666666;
+  color: #FFC36D;
+}
+
+.NameZipcode button {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+}

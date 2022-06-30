@@ -2,12 +2,12 @@ import React, { useState, useEffect } from 'react';
 import GuestContext from '../_utils/GuestContext';
 import Api from '../api';
 
+import './RSVPForm.css';
+
 import NameZipcode from './form-components/NameZipcode';
-import GuestNotFound from './messages/GuestNotFound';
 import Response from './form-components/Response';
 import GuestInfo from './form-components/GuestInfo';
 import IsAttending from './messages/IsAttending';
-import IsNotAttending from './messages/IsNotAttending';
 
 const RSVPForm = () => {
   const [page, setPage] = useState(0);

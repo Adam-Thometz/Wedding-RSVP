@@ -1,6 +1,6 @@
 import React, { useContext, useState } from 'react';
 import Api from '../../api';
-import useTextbox from '../../_hooks/useTextbox';
+import useTextbox from '../../_utils/useTextbox';
 import FormContext from '../../_utils/FormContext';
 
 const GuestInfo = () => {

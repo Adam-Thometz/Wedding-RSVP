@@ -13,7 +13,7 @@ const Response = () => {
     e.preventDefault();
     setGuestInfo(guest => ({ ...guest, isComing }));
     if (isComing === 'yes') {
-      setPage(2)
+      setPage(2);
     } else {
       setMessage(<IsNotAttending />);
       await Api.markNotComing({ ...guestInfo, isComing });

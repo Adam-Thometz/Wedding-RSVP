@@ -13,7 +13,7 @@ const GuestInfo = () => {
   });
 
   const handlePlusOne = e => {
-    const answer = e.target.value;
+    const answer = e.target.value === 'yes' ? true : false;
     setHasPlusOne(answer);
     if (answer === false && formData.plusOne !== '') {
       const resetPlusOne = { target: { name: 'plusOne', value: ''} };
@@ -36,17 +36,17 @@ const GuestInfo = () => {
       <div className='GuestInfo-plus-one'>
         <p>Would you like to bring a plus-one?</p>
         <label htmlFor='yes'>Yes</label>
-        <input type='radio' id='yes' name='plusOne' value={true} onChange={handlePlusOne} />
+        <input type='radio' id='yes' name='plusOne' value='yes' onChange={handlePlusOne} />
         <label htmlFor='no'>No</label>
-        <input type='radio' id='no' name='plusOne' value={false} onChange={handlePlusOne} />
+        <input type='radio' id='no' name='plusOne' value='no' onChange={handlePlusOne} />
         {hasPlusOne ? (<>
-          <label htmlFor=''>What is their name?</label>
+          <label htmlFor=''>What is their name? Enter their full name in case they might be on the guest list too!</label>
           <input type='text' id='plusOne' name='plusOne' value={formData.plusOne} onChange={setFormData} />
         </>) : null}
       </div>
 
       <div className='GuestInfo-diet'>
-        <label htmlFor='diet'>Please let us know of any dietary restrictions so we can provide the best and safest catering possible! If none, leave blank. </label>
+        <label htmlFor='diet'>Please inform us of dietary restrictions so we can provide the best and safest catering possible! If none, just leave blank. </label>
         <input type='text' id='diet' name='diet' value={formData.diet} onChange={setFormData} />
       </div>
 

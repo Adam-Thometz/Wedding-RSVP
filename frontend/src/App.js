@@ -1,18 +1,17 @@
+import { Route, Routes } from 'react-router-dom';
 import './App.css';
 
-import Navbar from './nav/Navbar';
-import Header from './header/Header';
-import Body from './body/Body';
 import RSVPForm from './form/RSVPForm';
+import Main from './main-page/Main';
 
 function App() {
   return (
-      <div className="App">
-        <Navbar />
-        <Header />
-        <Body />
-        <RSVPForm />
-      </div>
+    <div className="App">
+      <Routes>
+        <Route index element={<Main />} />
+        <Route path='/rsvp' element={<RSVPForm />} />
+      </Routes>
+    </div>
   );
 };
 

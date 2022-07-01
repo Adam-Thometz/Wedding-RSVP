@@ -21,6 +21,10 @@ const GuestInfo = () => {
     };
   };
 
+  const goBack = () => {
+    setPage(1);
+  };
+
   const handleSetGuestInfo = async e => {
     e.preventDefault();
     const updatedGuest = { ...guestInfo, ...formData };
@@ -31,10 +35,10 @@ const GuestInfo = () => {
 
   return (
     <div className='GuestInfo'>
-      <p>Excellent! Before you finish, we just need a bit more information.</p>
+      <p>Awesome! Before you finish, we just need a bit more information.</p>
 
       <div className='GuestInfo-plus-one'>
-        <p>Would you like to bring a plus-one?</p>
+        <p>Would you like to <b>bring a plus-one?</b></p>
         <label htmlFor='yes'>Yes</label>
         <input type='radio' id='yes' name='plusOne' value='yes' onChange={handlePlusOne} />
         <label htmlFor='no'>No</label>
@@ -46,7 +50,7 @@ const GuestInfo = () => {
       </div>
 
       <div className='GuestInfo-diet'>
-        <label htmlFor='diet'>Please inform us of dietary restrictions so we can provide the best and safest catering possible! If none, just leave blank. </label>
+        <label htmlFor='diet'>Please inform us of any <b>dietary restrictions</b> so we can provide the best and safest catering possible! If none, just leave blank. </label>
         <input type='text' id='diet' name='diet' value={formData.diet} onChange={setFormData} />
       </div>
 
@@ -56,6 +60,7 @@ const GuestInfo = () => {
         <input required type='email' id='email' name='email' value={formData.email} onChange={setFormData} />
       </div>
 
+      <button onClick={goBack}>Back</button>
       <button onClick={handleSetGuestInfo}>Next</button>
     </div>
   );

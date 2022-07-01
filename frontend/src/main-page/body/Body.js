@@ -6,9 +6,7 @@ import './Body.css';
 const Body = () => {
   const navigate = useNavigate();
   
-  const goToRSVP = () => {
-    navigate('/rsvp');
-  };
+  const goToRSVP = () => navigate('/rsvp');
 
   return (
     <main>

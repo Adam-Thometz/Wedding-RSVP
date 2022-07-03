@@ -2,7 +2,7 @@ import axios from 'axios';
 
 const BASE_URL = process.env.REACT_APP_BASE_URL || 'http://localhost:3001';
 
-class Api {
+class Guest {
   static async request(endpoint, data) {
     const url = `${BASE_URL}/${endpoint}`;
     try {
@@ -29,4 +29,4 @@ class Api {
   };
 };
 
-export default Api;
+export default Guest;

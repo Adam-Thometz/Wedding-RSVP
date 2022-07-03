@@ -1,7 +1,9 @@
 import React, { useState, useContext } from 'react';
-import Api from '../../_utils/api';
 import FormContext from '../../_utils/FormContext';
+
 import IsNotAttending from '../messages/IsNotAttending';
+
+import Guest from '../../_utils/guest';
 
 const Response = () => {
   const { guestInfo, setGuestInfo, setMessage, setPage } = useContext(FormContext);
@@ -16,7 +18,7 @@ const Response = () => {
       setPage(2);
     } else {
       setMessage(<IsNotAttending />);
-      await Api.markNotComing({ ...guestInfo, isComing });
+      await Guest.markNotComing({ ...guestInfo, isComing });
     }
   };
   const prevPage = () => setPage(0);

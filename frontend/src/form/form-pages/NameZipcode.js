@@ -1,10 +1,12 @@
 import React, { useContext, useState } from 'react';
 import useTextbox from '../../_utils/useTextbox';
 import FormContext from '../../_utils/FormContext';
-import GuestNotFound from '../messages/GuestNotFound';
-import Api from '../../_utils/api';
 
-import './NameZipcode.css'
+import './NameZipcode.css';
+
+import GuestNotFound from '../messages/GuestNotFound';
+
+import Guest from '../../_utils/guest';
 
 const NameZipcode = () => {
   const { setGuestInfo, setPage } = useContext(FormContext);
@@ -17,7 +19,7 @@ const NameZipcode = () => {
 
   const nextPage = async e => {
     e.preventDefault();
-    const guest = await Api.checkGuest(formData);
+    const guest = await Guest.checkGuest(formData);
     guest ? setPage(1) : setNotFound(true);
     setGuestInfo(guest => ({ ...guest, ...formData }));
   };

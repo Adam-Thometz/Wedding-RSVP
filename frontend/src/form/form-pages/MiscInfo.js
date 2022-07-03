@@ -1,9 +1,10 @@
 import React, { useContext, useState } from 'react';
-import Api from '../../_utils/api';
 import useTextbox from '../../_utils/useTextbox';
 import FormContext from '../../_utils/FormContext';
 
-const GuestInfo = () => {
+import Guest from '../../_utils/guest';
+
+const MiscInfo = () => {
   const { guestInfo, setGuestInfo, setPage } = useContext(FormContext);
   const [hasPlusOne, setHasPlusOne] = useState(false);
   const [formData, setFormData] = useTextbox({
@@ -28,7 +29,7 @@ const GuestInfo = () => {
   const handleSetGuestInfo = async e => {
     e.preventDefault();
     const updatedGuest = { ...guestInfo, ...formData };
-    await Api.markComing(updatedGuest);
+    await Guest.markComing(updatedGuest);
     setGuestInfo(updatedGuest);
     setPage(3);
   };
@@ -55,15 +56,15 @@ const GuestInfo = () => {
       </div>
 
       <div className='GuestInfo-email'>
-        <p>Lastly, enter your email so we can send you updates if necessary and, of course, give you access to photos of the whole shindig after!</p>
+        <p>Lastly, enter your <b>email</b> so we can send you updates if necessary and, of course, give you access to photos of the whole shindig after!</p>
         <label htmlFor='email'>Email: </label>
         <input required type='email' id='email' name='email' value={formData.email} onChange={setFormData} />
       </div>
 
       <button onClick={goBack}>Back</button>
-      <button onClick={handleSetGuestInfo}>Next</button>
+      <button onClick={handleSetGuestInfo} disabled={formData.email === ''}>Next</button>
     </div>
   );
 };
 
-export default GuestInfo;
+export default MiscInfo;

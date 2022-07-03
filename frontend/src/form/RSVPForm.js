@@ -5,7 +5,7 @@ import './RSVPForm.css';
 
 import NameZipcode from './form-pages/NameZipcode';
 import Response from './form-pages/Response';
-import GuestInfo from './form-pages/GuestInfo';
+import MiscInfo from './form-pages/MiscInfo';
 import IsAttending from './messages/IsAttending';
 
 const RSVPForm = () => {
@@ -24,7 +24,7 @@ const RSVPForm = () => {
   const pages = [
     <NameZipcode  />,
     <Response />,
-    <GuestInfo />,
+    <MiscInfo />,
     <IsAttending />
   ];
 

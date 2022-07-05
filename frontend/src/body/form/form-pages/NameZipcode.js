@@ -1,12 +1,13 @@
 import React, { useContext, useState } from 'react';
-import useTextbox from '../../_utils/useTextbox';
-import FormContext from '../../_utils/FormContext';
+import useTextbox from '../../../_utils/useTextbox';
+import FormContext from '../../../_utils/FormContext';
 
 import './NameZipcode.css';
 
 import GuestNotFound from '../messages/GuestNotFound';
 
-import Guest from '../../_utils/guest';
+import Guest from '../../../_utils/guest';
+import NextButton from '../_components/NextButton';
 
 const NameZipcode = () => {
   const { setGuestInfo, setPage } = useContext(FormContext);
@@ -26,7 +27,7 @@ const NameZipcode = () => {
 
   return (
     <div className='NameZipcode'>
-      <p>Before we begin, please enter your first name, last name, and the zipcode where you received your invitation so we can find you on our guest list and weed out the wedding crashers!</p>
+      <p>Please enter your first name, last name, and the zipcode where you received your invitation so we can find you on our guest list.</p>
       <label htmlFor='firstName'>First Name: </label>
       <input
         type='text'
@@ -53,7 +54,7 @@ const NameZipcode = () => {
         value={formData.zipcode}
         onChange={setFormData}
       />
-      <button onClick={nextPage}>Next</button>
+      <NextButton onClick={nextPage} />
       {notFound ? <GuestNotFound /> : null}
     </div>
   );

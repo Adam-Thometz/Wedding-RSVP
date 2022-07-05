@@ -1,0 +1,5 @@
+main {
+  background: linear-gradient(to bottom, #616261 0%, #444544 45.86%, #737573 100%);
+  padding: 20px;
+  z-index: -5;
+}

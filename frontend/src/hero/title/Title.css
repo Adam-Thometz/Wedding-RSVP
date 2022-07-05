@@ -1,0 +1,8 @@
+.Title {
+  text-align: center;
+  font-size: 2rem;
+  height: 100vh;
+  width: 50%;
+  text-align: left;
+  transform: translateX(100%);
+}

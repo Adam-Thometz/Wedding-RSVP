@@ -9,9 +9,11 @@
 }
 
 body {
-  color: #FFC36D;
-  background-color: #333333B2;
+  color: white;
+  font-size: 24px;
   font-family: DM Sans;
+  margin: 0;
+  accent-color: #50BAC7;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }

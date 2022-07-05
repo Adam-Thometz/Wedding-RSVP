@@ -1,15 +1,10 @@
 import React from 'react';
-import { useNavigate } from 'react-router-dom';
 
-import './Body.css';
+import './Details.css';
 
-const Body = () => {
-  const navigate = useNavigate();
-  
-  const goToRSVP = () => navigate('/rsvp');
-
+const Details = () => {
   return (
-    <main>
+    <article>
       <section>
         <h2>Details</h2>
         <article>
@@ -24,11 +19,10 @@ const Body = () => {
       </section>
       <section>
         <h2>RSVP</h2>
-        <p>Let us know if you plan to come by going to the RSVP page. Click below to continue.</p>
-        <button onClick={goToRSVP}>Go to RSVP</button>
+        <p>Let us know if you plan to come by RSVPing in the form below.</p>
       </section>
-    </main>
+    </article>
   );
 };
 
-export default Body;
+export default Details;

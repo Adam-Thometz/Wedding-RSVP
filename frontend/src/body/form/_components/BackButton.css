@@ -1,0 +1,9 @@
+.BackButton {
+  color: #FEFFFF;
+  border: 1px solid white;
+  font-size: 18px;
+  padding: 15px 45px;
+  font-family: DM Sans;
+  border-radius: 20px;
+  background-color: rgba(0, 0, 0, 0);
+}

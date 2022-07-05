@@ -1,9 +1,13 @@
 import React, { useState, useContext } from 'react';
-import FormContext from '../../_utils/FormContext';
+import FormContext from '../../../_utils/FormContext';
+
+import './Response.css'
 
 import IsNotAttending from '../messages/IsNotAttending';
 
-import Guest from '../../_utils/guest';
+import Guest from '../../../_utils/guest';
+import NextButton from '../_components/NextButton';
+import BackButton from '../_components/BackButton';
 
 const Response = () => {
   const { guestInfo, setGuestInfo, setMessage, setPage } = useContext(FormContext);
@@ -19,15 +23,15 @@ const Response = () => {
     } else {
       setMessage(<IsNotAttending />);
       await Guest.markNotComing({ ...guestInfo, isComing });
-    }
+    };
   };
-  const prevPage = () => setPage(0);
 
   return (
     <div className='Response'>
       <p>Hi {guestInfo.firstName}! Great to see you here! Now, do you plan to come?</p>
       <label htmlFor='yes'>Yes</label>
       <input
+        className='Response-radio'
         type='radio'
         id='yes'
         name='response'
@@ -36,14 +40,15 @@ const Response = () => {
       />
       <label htmlFor='no'>No</label>
       <input
+        className='Response-radio'
         type='radio'
         id='no'
         name='response'
         value='no'
         onChange={handleSetIsComing}
       />
-      <button onClick={nextPage} disabled={isComing === ''}>Next</button>
-      <button onClick={prevPage}>Back</button>
+      <NextButton onClick={nextPage} disabled={isComing === ''} />
+      <BackButton />
     </div>
   );
 };

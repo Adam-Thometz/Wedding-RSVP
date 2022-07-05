@@ -1,0 +1,10 @@
+.Response {
+  z-index: 5;
+  padding: 40vh 0;
+}
+
+.Response-radio {
+  width: 30px;
+  height: 30px;
+  background-color: #fff;
+}

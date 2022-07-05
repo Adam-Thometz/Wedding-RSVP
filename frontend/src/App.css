@@ -1,3 +1,11 @@
 .App h1, h2 {
   font-family: Grenadier;
 }
+
+.App h1 {
+  font-size: 96px;
+}
+
+.App h2 {
+  color: #FFC36D;
+}

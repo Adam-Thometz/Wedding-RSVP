@@ -1,6 +1,5 @@
 header {
-  background-image: url('../_icons/header-background.png');
+  background-image: linear-gradient(rgba(30, 31, 30, 0) 82.69%, #1F1F1F 100%), url('../_icons/header-background.png');
   background-repeat: no-repeat;
   background-size: cover;
-  width: 100vw;
 }

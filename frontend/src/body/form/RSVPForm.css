@@ -18,3 +18,8 @@ form {
   right: -78%;
 }
 
+@media (max-width: 1275px) {
+  form {
+    width: 75%;
+  }
+}

@@ -2,17 +2,5 @@
   display: flex;
   flex-direction: column;
   position: relative;
-  padding: 40vh 0;
-}
-
-.NameZipcode input {
-  width: 50%;
-  background-color: #666666;
-  color: #FFC36D;
-}
-
-.NameZipcode button {
-  position: absolute;
-  bottom: 0;
-  right: 0;
+  padding: 10% 0;
 }

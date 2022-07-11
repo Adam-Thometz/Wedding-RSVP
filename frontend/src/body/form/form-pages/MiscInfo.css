@@ -1,3 +1,20 @@
 .MiscInfo {
-  padding: 40vh 0;
+  padding: 10% 0;
+}
+
+.MiscInfo-plus-one-options {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+}
+
+.MiscInfo-plus-one-info {
+  font-size: 16px;
+  margin: 2px;
+}
+
+.MiscInfo-buttons {
+  margin: 20px 0;
+  display: flex;
+  justify-content: space-between;
 }

@@ -1,0 +1,34 @@
+.Option {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 325px;
+  height: 166px;
+  border: 2.5px solid #999999;
+  border-radius: 20px;
+  cursor: pointer;
+  transition: .5s;
+}
+
+.Option-text {
+  width: 60%;
+  margin: 0 auto;
+  text-align: center;
+  font-size: 24px;
+}
+
+.Option:hover {
+  border-color: #5BE8FA;
+}
+
+.selected {
+  background-color: #50BAC71A;
+  border-color: #5BE8FA;
+}
+
+@media (max-width: 850px) {
+  .Option {
+    width: 100%;
+  }
+}

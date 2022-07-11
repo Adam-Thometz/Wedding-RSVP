@@ -33,9 +33,9 @@ const RSVPForm = () => {
   return (
     <FormContext.Provider value={{ guestInfo, setGuestInfo, setPage, setMessage }}>
       <form>
-        <img src={feather} alt='feather' />
+        {window.innerWidth >= 1275 ? <img src={feather} alt='' /> : null}
         {message ? message : pages[page]}
-        <img src={feather} alt='' />
+        {window.innerWidth >= 1275 ? <img src={feather} alt='' /> : null}
       </form>
     </FormContext.Provider>
   );

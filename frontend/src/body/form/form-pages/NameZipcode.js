@@ -8,6 +8,7 @@ import GuestNotFound from '../messages/GuestNotFound';
 
 import Guest from '../../../_utils/guest';
 import NextButton from '../_components/NextButton';
+import TextFormGroup from '../_components/TextFormGroup';
 
 const NameZipcode = () => {
   const { setGuestInfo, setPage } = useContext(FormContext);
@@ -27,33 +28,12 @@ const NameZipcode = () => {
 
   return (
     <div className='NameZipcode'>
-      <p>Please enter your first name, last name, and the zipcode where you received your invitation so we can find you on our guest list.</p>
-      <label htmlFor='firstName'>First Name: </label>
-      <input
-        type='text'
-        id='firstName'
-        name='firstName'
-        value={formData.firstame}
-        onChange={setFormData}
-      />
-      
-      <label htmlFor='lastName'>Last Name: </label>
-      <input
-        type='text'
-        id='lastName'
-        name='lastName'
-        value={formData.lastame}
-        onChange={setFormData}
-      />
+      <p>Enter your first name, last name, and the zipcode where you received your invitation so we can find you on our guest list.</p>
 
-      <label htmlFor='zipcode'>Zipcode: </label>
-      <input
-        type='text'
-        id='zipcode'
-        name='zipcode'
-        value={formData.zipcode}
-        onChange={setFormData}
-      />
+      <TextFormGroup required labelText='First Name' id='firstName' name='firstName' value={formData.firstName} onChange={setFormData} />
+      <TextFormGroup required labelText='Last Name' id='lastName' name='lastName' value={formData.lastName} onChange={setFormData} />
+      <TextFormGroup required labelText='Zipcode' id='zipcode' name='zipcode' value={formData.zipcode} onChange={setFormData} />
+
       <NextButton onClick={nextPage} />
       {notFound ? <GuestNotFound /> : null}
     </div>

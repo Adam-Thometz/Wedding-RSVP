@@ -1,0 +1,46 @@
+.TextFormGroup {
+  position: relative;
+}
+
+.TextFormGroup-label {
+  position: absolute;
+  top: 10px;
+  left: 0;
+  font-size: 1.2rem;
+  transition: .5s ;
+  padding-left: 5px;
+  color: #CACACA;
+}
+
+.TextFormGroup-input {
+  width: 50%;
+  height: 50px;
+  padding: 18px 5px 5px 5px;
+  color: white;
+  margin-bottom: 30px;
+  background-color: #666666;
+  box-sizing: border-box;
+  box-shadow: none;
+  outline: none;
+  border: none;
+  border-bottom: 1.5px solid #C2C2C2;
+  font-size: 1rem;
+  border-radius: 4px 4px 0 0;
+}
+
+.TextFormGroup-input:focus {
+  border-bottom: 1.5px solid #50BAC7;
+  background-color: #747373;
+}
+
+.TextFormGroup-input:focus ~ label,
+.TextFormGroup-input:valid ~ label {
+  top: 1px;
+  font-size: 0.8rem;
+}
+
+@media (max-width: 700px) {
+  .TextFormGroup-input {
+    width: 100%;
+  }
+}

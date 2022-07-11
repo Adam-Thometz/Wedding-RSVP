@@ -1,11 +1,9 @@
-import './App.css';
-
 import RSVPForm from './body/form/RSVPForm';
 import HeroImage from './hero/HeroImage';
 import Details from './body/details/Details';
 import Navbar from './hero/nav/Navbar';
 import Header from './hero/title/Title';
-import Body from './body/Body';
+import GradientWrapper from './body/GradientWrapper';
 
 function App() {
   return (
@@ -14,10 +12,10 @@ function App() {
         <Navbar />
         <Header />
       </HeroImage>
-      <Body>
+      <GradientWrapper>
         <Details />
         <RSVPForm />
-      </Body>
+      </GradientWrapper>
     </div>
   );
 };

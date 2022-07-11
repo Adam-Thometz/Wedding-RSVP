@@ -8,12 +8,16 @@ import IsNotAttending from '../messages/IsNotAttending';
 import Guest from '../../../_utils/guest';
 import NextButton from '../_components/NextButton';
 import BackButton from '../_components/BackButton';
+import Option from '../_components/Option';
 
 const Response = () => {
   const { guestInfo, setGuestInfo, setMessage, setPage } = useContext(FormContext);
   const [isComing, setIsComing] = useState('');
 
-  const handleSetIsComing = e => setIsComing(e.target.value);
+  const handleSetIsComing = e => {
+    // debugger;
+    setIsComing(e.currentTarget.id);
+  };
 
   const nextPage = async e => {
     e.preventDefault();
@@ -29,26 +33,14 @@ const Response = () => {
   return (
     <div className='Response'>
       <p>Hi {guestInfo.firstName}! Great to see you here! Now, do you plan to come?</p>
-      <label htmlFor='yes'>Yes</label>
-      <input
-        className='Response-radio'
-        type='radio'
-        id='yes'
-        name='response'
-        value='yes'
-        onChange={handleSetIsComing}
-      />
-      <label htmlFor='no'>No</label>
-      <input
-        className='Response-radio'
-        type='radio'
-        id='no'
-        name='response'
-        value='no'
-        onChange={handleSetIsComing}
-      />
-      <NextButton onClick={nextPage} disabled={isComing === ''} />
-      <BackButton />
+      <div className='Response-options'>
+        <Option id='yes' text="Yes, I'll be there!" onClick={handleSetIsComing} selected={isComing === 'yes'} />
+        <Option id='no' text="No, I won't be able to make it" onClick={handleSetIsComing} selected={isComing === 'no'} />
+      </div>
+      <div className='Response-buttons'>
+        <BackButton />
+        <NextButton onClick={nextPage} disabled={isComing === ''} />
+      </div>
     </div>
   );
 };

@@ -1,9 +1,11 @@
 import React from 'react';
 
+import './IsNotAttending.css';
+
 const IsNotAttending = () => {
   return (
     <div className='IsNotAttending'>
-      <p>We're saddened that you will not be able to attend. :( If anything changes, you can come back to this site on the same device you're using now and resubmit by September 15th!</p>
+      <p>We'll miss you! :( If anything changes, you can come back to this site and resubmit by September 15th!</p>
     </div>
   );
 };

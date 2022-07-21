@@ -9,6 +9,8 @@
   border-radius: 20px;
   cursor: pointer;
   transition: .5s;
+  color: white;
+  margin: 0 20px;
 }
 
 .Option-text {

@@ -1,0 +1,13 @@
+.Email {
+  padding: 10% 0;
+}
+
+.Email-info {
+  font-size: 16px;
+}
+
+.Email-buttons {
+  margin: 20px 0;
+  display: flex;
+  justify-content: space-between;
+}

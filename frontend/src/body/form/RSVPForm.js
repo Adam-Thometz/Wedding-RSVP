@@ -5,10 +5,12 @@ import './RSVPForm.css';
 
 import NameZipcode from './form-pages/NameZipcode';
 import Response from './form-pages/Response';
-import MiscInfo from './form-pages/MiscInfo';
+import PlusOne from './form-pages/PlusOne';
 import IsAttending from './messages/IsAttending';
 
 import feather from '../../_icons/feather.png';
+import Diet from './form-pages/Diet';
+import Email from './form-pages/Email';
 
 const RSVPForm = () => {
   const [page, setPage] = useState(0);
@@ -26,7 +28,9 @@ const RSVPForm = () => {
   const pages = [
     <NameZipcode  />,
     <Response />,
-    <MiscInfo />,
+    <PlusOne />,
+    <Diet />,
+    <Email />,
     <IsAttending />
   ];
 

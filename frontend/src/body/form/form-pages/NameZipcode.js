@@ -12,7 +12,7 @@ import TextFormGroup from '../_components/TextFormGroup';
 
 const NameZipcode = () => {
   const { setGuestInfo, setPage } = useContext(FormContext);
-  const [notFound, setNotFound] = useState(false)
+  const [notFound, setNotFound] = useState(false);
   const [formData, setFormData] = useTextbox({
     firstName: '',
     lastName: '',
@@ -28,7 +28,8 @@ const NameZipcode = () => {
 
   return (
     <div className='NameZipcode'>
-      <p>Enter your first name, last name, and the zipcode where you received your invitation so we can find you on our guest list.</p>
+      <h3>Hello friend! Tell us who you are!</h3>
+      <p className='NameZipcode-info'>Enter your first name, last name, and the zipcode where you received your invitation so we can find you on our guest list.</p>
 
       <TextFormGroup required labelText='First Name' id='firstName' name='firstName' value={formData.firstName} onChange={setFormData} />
       <TextFormGroup required labelText='Last Name' id='lastName' name='lastName' value={formData.lastName} onChange={setFormData} />

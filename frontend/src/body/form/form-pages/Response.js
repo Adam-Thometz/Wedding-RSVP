@@ -32,10 +32,11 @@ const Response = () => {
 
   return (
     <div className='Response'>
-      <p>Hi {guestInfo.firstName}! Great to see you here! Now, do you plan to come?</p>
+      <h3>Oh hi {guestInfo.firstName}!</h3>
+      <p className='Response-info'>Great to see you here! Do you plan to come?</p>
       <div className='Response-options'>
-        <Option id='yes' text="Yes, I'll be there!" onClick={handleSetIsComing} selected={isComing === 'yes'} />
         <Option id='no' text="No, I won't be able to make it" onClick={handleSetIsComing} selected={isComing === 'no'} />
+        <Option id='yes' text="Yes, I'll be there!" onClick={handleSetIsComing} selected={isComing === 'yes'} />
       </div>
       <div className='Response-buttons'>
         <BackButton />

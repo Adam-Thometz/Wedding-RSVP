@@ -10,7 +10,7 @@ const IsAttending = () => {
     <article className='IsAttending'>
       <p>You're in! We look forward to seeing you{plusOneFirstName ? ` and ${plusOneFirstName}` : ''} there! If anything changes, you can come back to this site and refill the form by September 15th!</p>
 
-      <p>The whole event is taking place on October 22nd, 6pm, at...</p>
+      <p>The reception is taking place on October 22nd, 7pm, at...</p>
 
       <address>
         Jumel Terrace Books<br />
@@ -21,13 +21,12 @@ const IsAttending = () => {
       <p>Other things to note:</p>
 
       <ul>
-        <li>Ceremony location may change if the weather isn't cooperating. Our backup location is across the street!</li>
-        <li>Finger foods will be provided.</li>
-        <li>There will be an open bar with a bartender and feel free to bring your own!</li>
-        <li>The theme of the night is Roaring 20s so dress accordingly! Think Great Gatsby or Peaky Blinders. You may add a modern spin since we're also in the 20's!</li>
+        <li>Unless you're a parent, sibling, bestman, or maid of honor, <i>your invite is for the reception only</i>. We have chosen to keep our ceremony private - please respect our wishes. You'll still have access to photos of the ceremony.</li><br />
+        <li>The theme of the night is Roaring 20s so dress accordingly! Think Great Gatsby or Peaky Blinders. You may add a modern spin since we're also in the 20's!</li><br />
+        <li>Lots of finger food will be provided and there will be an open bar with a bartender. Feel free to bring your own alcohol as well!</li>
       </ul>
 
-      <p>Feel free to contact us with questions. Until then, if you'd like to purchase a gift for us, <a href="#registry">check out our registries</a></p>
+      <p>Feel free to contact us with questions. Until then, if you'd like to purchase a gift for us, <a href="#registry">check out our registries!</a></p>
     </article>
   );
 };

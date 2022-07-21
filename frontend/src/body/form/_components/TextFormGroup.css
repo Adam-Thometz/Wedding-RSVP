@@ -4,27 +4,27 @@
 
 .TextFormGroup-label {
   position: absolute;
-  top: 10px;
+  top: 16px;
   left: 0;
-  font-size: 1.2rem;
+  font-size: 16px;
   transition: .5s ;
-  padding-left: 5px;
+  padding-left: 16px;
   color: #CACACA;
 }
 
 .TextFormGroup-input {
   width: 50%;
   height: 50px;
-  padding: 18px 5px 5px 5px;
+  padding: 24px 16px 4px 16px;
   color: white;
   margin-bottom: 30px;
-  background-color: #666666;
+  background-color: #474747;
   box-sizing: border-box;
   box-shadow: none;
   outline: none;
   border: none;
   border-bottom: 1.5px solid #C2C2C2;
-  font-size: 1rem;
+  font-size: 1.2rem;
   border-radius: 4px 4px 0 0;
 }
 
@@ -35,8 +35,9 @@
 
 .TextFormGroup-input:focus ~ label,
 .TextFormGroup-input:valid ~ label {
-  top: 1px;
+  top: 4px;
   font-size: 0.8rem;
+  color: #50BAC7;
 }
 
 @media (max-width: 700px) {

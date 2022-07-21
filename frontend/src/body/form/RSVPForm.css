@@ -6,6 +6,7 @@ form {
   background: none;
   display: flex;
   justify-content: space-between;
+  color: #FFC36D;
 }
 
 .feather {

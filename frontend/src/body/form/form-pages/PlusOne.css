@@ -1,19 +1,18 @@
-.MiscInfo {
+.PlusOne {
   padding: 10% 0;
 }
 
-.MiscInfo-plus-one-options {
+.PlusOne-options {
   display: flex;
   justify-content: space-evenly;
   align-items: center;
 }
 
-.MiscInfo-plus-one-info {
+.PlusOne-info {
   font-size: 16px;
-  margin: 2px;
 }
 
-.MiscInfo-buttons {
+.PlusOne-buttons {
   margin: 20px 0;
   display: flex;
   justify-content: space-between;

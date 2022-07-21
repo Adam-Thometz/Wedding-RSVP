@@ -3,6 +3,14 @@
 const db = require('./db');
 
 class Guest {
+  static async getGuests() {
+    const result = await db.query(`
+      SELECT first_name AS "firstName", last_name AS "lastName", is_coming AS "isComing", plus_one AS "plusOne", diet, email
+      FROM guests
+    `);
+    return result.rows;
+  };
+
   static async checkGuest({ firstName, lastName, zipcode }) {
     const result = await db.query(`
       SELECT first_name, last_name, zipcode

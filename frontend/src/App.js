@@ -4,10 +4,12 @@ import Details from './body/details/Details';
 import Navbar from './hero/nav/Navbar';
 import Header from './hero/title/Title';
 import GradientWrapper from './body/GradientWrapper';
+import GuestList from './guest-list/GuestList';
 
 function App() {
   return (
     <div className="App">
+      {/* <GuestList /> */}
       <HeroImage>
         <Navbar />
         <Header />

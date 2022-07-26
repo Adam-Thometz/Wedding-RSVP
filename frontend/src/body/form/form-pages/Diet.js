@@ -22,7 +22,7 @@ const Diet = () => {
   return (
     <div className='Diet'>
       <h3>Great! Two more things.</h3>
-      <p className='Diet-info'>Please tell us your diet restrictions so we can plan catering with you in mind. If none, leave blank.</p>
+      <p className='Diet-info'>Enter your diet restrictions so we can plan catering with you in mind. If none, leave blank.</p>
       <TextFormGroup required labelText='Diet restrictions' id='diet' name='diet' value={formData.diet} onChange={setFormData} />
 
       <div className='Diet-buttons'>

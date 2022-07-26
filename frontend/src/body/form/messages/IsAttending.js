@@ -8,9 +8,8 @@ const IsAttending = () => {
   const plusOneFirstName = guestInfo.plusOne.split(' ')[0];
   return (
     <article className='IsAttending'>
-      <p>You're in! We look forward to seeing you{plusOneFirstName ? ` and ${plusOneFirstName}` : ''} there! If anything changes, you can come back to this site and refill the form by September 15th!</p>
-
-      <p>The reception is taking place on October 22nd, 7pm, at...</p>
+      <h3>You're in! We look forward to seeing you{plusOneFirstName ? ` and ${plusOneFirstName}` : ''} there!</h3>
+      <p> If anything changes, you can come back to this site and refill the form by September 15th! The reception is taking place on October 22nd, 7pm, at...</p>
 
       <address>
         Jumel Terrace Books<br />
@@ -21,8 +20,8 @@ const IsAttending = () => {
       <p>Other things to note:</p>
 
       <ul>
-        <li>Unless you're a parent, sibling, bestman, or maid of honor, <i>your invite is for the reception only</i>. We have chosen to keep our ceremony private - please respect our wishes. You'll still have access to photos of the ceremony.</li><br />
-        <li>The theme of the night is Roaring 20s so dress accordingly! Think Great Gatsby or Peaky Blinders. You may add a modern spin since we're also in the 20's!</li><br />
+        <li>This invite is for the reception. We have chosen to have a private ceremony.</li><br />
+        <li>The dresscode is Roaring 20s themed cocktail attire with a modern spin!</li><br />
         <li>Lots of finger food will be provided and there will be an open bar with a bartender. Feel free to bring your own alcohol as well!</li>
       </ul>
 

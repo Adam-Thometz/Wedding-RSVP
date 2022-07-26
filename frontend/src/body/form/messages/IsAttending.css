@@ -1,6 +1,17 @@
 .IsAttending {
-  padding: 20vh 0;
+  padding: 22% 0;
   margin: 0 auto;
   width: 60%;
   font-size: 1.3rem;
+}
+
+.IsAttending a {
+  color: #50BAC7;
+}
+
+@media (max-width: 1275px) {
+  .IsAttending {
+    width: 100%;
+    margin-bottom: 20px;
+  }
 }

@@ -9,6 +9,10 @@ form {
   color: #FFC36D;
 }
 
+h3 {
+  margin: 0;
+}
+
 .feather {
   position: absolute;
   top: 0;

@@ -2,8 +2,8 @@ import React from 'react';
 
 import './TextFormGroup.css';
 
-const TextFormGroup = ({ labelText, id, name, value, onChange, required }) => (
-  <div className='TextFormGroup'>
+const TextFormGroup = ({ labelText, id, name, value, onChange, required, width = '100%' }) => (
+  <div className='TextFormGroup' style={{ width }}>
     <input 
       className='TextFormGroup-input'
       type='text'

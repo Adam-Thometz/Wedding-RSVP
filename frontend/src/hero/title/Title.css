@@ -5,4 +5,19 @@
   width: 50%;
   text-align: left;
   transform: translateX(100%);
+  margin-top: 20vh;
+}
+
+.Title p {
+  margin: 0;
+}
+
+@media (max-width: 635px) {
+  .Title {
+    width: 100%;
+    transform: none;
+    margin: 0 3vw;
+    transform: translateY(30%);
+    padding: 16px;
+  }
 }

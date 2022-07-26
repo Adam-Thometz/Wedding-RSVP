@@ -15,7 +15,6 @@ const Response = () => {
   const [isComing, setIsComing] = useState('');
 
   const handleSetIsComing = e => {
-    // debugger;
     setIsComing(e.currentTarget.id);
   };
 

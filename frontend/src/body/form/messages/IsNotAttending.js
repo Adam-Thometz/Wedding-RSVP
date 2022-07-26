@@ -5,7 +5,8 @@ import './IsNotAttending.css';
 const IsNotAttending = () => {
   return (
     <div className='IsNotAttending'>
-      <p>We'll miss you! :( If anything changes, you can come back to this site and resubmit by September 15th!</p>
+      <h3>We'll miss you! :(</h3>
+      <p>If anything changes, you can come back to this site and resubmit by September 15th!</p>
     </div>
   );
 };

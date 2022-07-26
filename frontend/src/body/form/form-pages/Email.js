@@ -21,6 +21,7 @@ const Email = () => {
     setGuestInfo(updatedGuest);
     setPage(5);
   };
+  
   return (
     <div className='Email'>
       <h3>One last thing!</h3>
@@ -33,7 +34,7 @@ const Email = () => {
         <NextButton onClick={handleSetGuestInfo} disabled={formData.email === ''} />
       </div>
     </div>
-  )
-}
+  );
+};
 
-export default Email
+export default Email;

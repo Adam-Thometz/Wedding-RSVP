@@ -29,10 +29,12 @@ const NameZipcode = () => {
   return (
     <div className='NameZipcode'>
       <h3>Hello friend! Tell us who you are!</h3>
-      <p className='NameZipcode-info'>Enter your first name, last name, and the zipcode where you received your invitation so we can find you on our guest list.</p>
+      <p className='NameZipcode-info'>Enter your first name, last name, and the zipcode where you received your invitation.</p>
 
-      <TextFormGroup required labelText='First Name' id='firstName' name='firstName' value={formData.firstName} onChange={setFormData} />
-      <TextFormGroup required labelText='Last Name' id='lastName' name='lastName' value={formData.lastName} onChange={setFormData} />
+      <div className='NameZipcode-name'>
+        <TextFormGroup required labelText='First Name' id='firstName' name='firstName' value={formData.firstName} onChange={setFormData} width='40%' />
+        <TextFormGroup required labelText='Last Name' id='lastName' name='lastName' value={formData.lastName} onChange={setFormData} width='55%' />
+      </div>
       <TextFormGroup required labelText='Zipcode' id='zipcode' name='zipcode' value={formData.zipcode} onChange={setFormData} />
 
       <NextButton onClick={nextPage} />

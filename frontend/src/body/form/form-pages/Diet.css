@@ -1,5 +1,6 @@
 .Diet {
   padding: 22% 0;
+  width: 100%;
 }
 
 .Diet-info {
@@ -12,3 +13,8 @@
   display: flex;
   justify-content: space-between;
 }
+
+/* @media (max-width: 450px) {
+  .Diet {
+  }
+} */

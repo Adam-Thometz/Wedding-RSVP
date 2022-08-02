@@ -31,6 +31,10 @@
 
 @media (max-width: 850px) {
   .Option {
-    width: 100%;
+    width: 250px;
+  }
+
+  .Option-text {
+    font-size: 16px;
   }
 }

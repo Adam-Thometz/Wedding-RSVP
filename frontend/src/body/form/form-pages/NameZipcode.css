@@ -3,6 +3,7 @@
   flex-direction: column;
   position: relative;
   padding: 22% 0;
+  width: 100%;
 }
 
 .NameZipcode-info {

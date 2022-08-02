@@ -1,5 +1,6 @@
 .PlusOne {
   padding: 22% 0;
+  width: 100%;
 }
 
 .PlusOne-options {
@@ -16,5 +17,5 @@
 .PlusOne-buttons {
   margin: 20px 0;
   display: flex;
-  justify-content: space-between;
+  justify-content: right;
 }

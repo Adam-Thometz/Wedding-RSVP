@@ -1,5 +1,6 @@
 .Response {
   padding: 22% 0;
+  width: 100%;
 }
 
 .Response-info {
@@ -16,11 +17,5 @@
 .Response-buttons {
   margin: 20px 0;
   display: flex;
-  justify-content: space-between;
-}
-
-@media (max-width: 850px) {
-  .TextFormGroup-input {
-    width: 100%;
-  }
+  justify-content: right;
 }

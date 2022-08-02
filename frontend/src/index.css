@@ -14,24 +14,17 @@ body {
   font-family: DM Sans;
   font-weight: 100;
   margin: 0;
+  width: 100vw;
   background-color: #737573;
   accent-color: #50BAC7;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
 
-h1, h2 {
+h1 {
   font-family: Grenadier;
   font-weight: 100;
-}
-
-h1 {
   font-size: 96px;
   margin: 0;
-  color: #FFC36D;
-}
-
-h2 {
-  font-size: 64px;
   color: #FFC36D;
 }

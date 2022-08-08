@@ -37,11 +37,11 @@ const PlusOne = () => {
       <h3>Awesome!</h3>
       <p className='PlusOne-info'>Before you finish, we just need a bit more information. Are you bringing a plus-one?</p>
       <div className='PlusOne-options'>
-        <Option id='no' text="Nope. Just me" onClick={handlePlusOne} selected={hasPlusOne === 'no'} />
-        <Option id='yes' text="Yes!" onClick={handlePlusOne} selected={hasPlusOne === 'yes'} />
+        <Option id='no' text="No" onClick={handlePlusOne} selected={hasPlusOne === 'no'} />
+        <Option id='yes' text="Yes" onClick={handlePlusOne} selected={hasPlusOne === 'yes'} />
       </div>
       {hasPlusOne === 'yes' ? (<>
-        <p className='PlusOne-info'>Enter their first and last name in case they're already on the guest list so we can mark them too.</p>
+        <p className='PlusOne-name'>Enter their first and last name if you think they're already on the guest list so we can mark them too.</p>
         <TextFormGroup required labelText='Name of plus-one' id='plusOne' name='plusOne' value={formData.plusOne} onChange={setFormData} />
       </>) : null}
 

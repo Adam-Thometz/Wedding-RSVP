@@ -11,7 +11,7 @@
 .Diet-buttons {
   margin: 20px 0;
   display: flex;
-  justify-content: space-between;
+  justify-content: right;
 }
 
 /* @media (max-width: 450px) {

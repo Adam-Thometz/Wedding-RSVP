@@ -58,8 +58,25 @@ class Guest {
                 email
     `, [isComing, plusOne, diet, email, firstName, lastName, zipcode]);
 
+    // check if there is a plus one listed and look for them in the db
+    const plusOneName = plusOne.split(' ');
+    if (plusOneName && plusOneName.length === 2) this.markPlusOne({ 
+      guestName: `${firstName} ${lastName}`,
+      plusOneName
+    });
+
     const guest = result.rows[0];
     return guest;
+  };
+
+  static async markPlusOne({ guestName, plusOneName }) {
+    await db.query(`
+      UPDATE guests
+      SET is_coming = $1,
+          plus_one = $2
+      WHERE first_name = $3 AND
+            last_name = $4
+    `, [isComing, guestName, plusOneName[0], plusOneName[1]]);
   };
 };
 

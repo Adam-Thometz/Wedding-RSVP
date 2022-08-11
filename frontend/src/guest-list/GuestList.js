@@ -7,7 +7,6 @@ const GuestList = () => {
   useEffect(() => {
     async function getAllGuests() {
       const result = await Guest.getGuests();
-      debugger;
       setGuests(result);
     }
     getAllGuests();

@@ -72,11 +72,11 @@ class Guest {
   static async markPlusOne({ guestName, plusOneName }) {
     await db.query(`
       UPDATE guests
-      SET is_coming = $1,
-          plus_one = $2
-      WHERE first_name = $3 AND
-            last_name = $4
-    `, [isComing, guestName, plusOneName[0], plusOneName[1]]);
+      SET is_coming = 'yes',
+          plus_one = $1
+      WHERE first_name = $2 AND
+            last_name = $3
+    `, [guestName, plusOneName[0], plusOneName[1]]);
   };
 };
 

@@ -38,8 +38,8 @@ const Response = () => {
         <Option id='yes' text="Yes" onClick={handleSetIsComing} selected={isComing === 'yes'} />
       </div>
       <div className='Response-buttons'>
-        <BackButton />
         <NextButton onClick={nextPage} disabled={isComing === ''} />
+        <BackButton />
       </div>
     </div>
   );

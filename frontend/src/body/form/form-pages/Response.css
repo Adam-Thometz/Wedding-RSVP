@@ -10,12 +10,16 @@
 
 .Response-options {
   display: flex;
-  justify-content: space-evenly;
+  justify-content: space-between;
   align-items: center;
+  width: 85%;
+  margin: 0 auto;
+  padding: 20px;
 }
 
 .Response-buttons {
   margin: 20px 0;
   display: flex;
-  justify-content: right;
+  flex-direction: column;
+  width: 100%;
 }

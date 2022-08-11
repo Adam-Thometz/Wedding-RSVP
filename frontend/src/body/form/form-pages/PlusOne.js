@@ -46,8 +46,8 @@ const PlusOne = () => {
       </>) : null}
 
       <div className='PlusOne-buttons'>
-        <BackButton />
         <NextButton onClick={handleSetGuestInfo} disabled={disabled} />
+        <BackButton />
       </div>
     </div>
   );

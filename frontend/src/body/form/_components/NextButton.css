@@ -2,12 +2,10 @@
   font-size: 18px;
   color: #FEFFFF;
   background-color: #50BAC7;
-  padding: 15px 45px;
+  padding: 10px 45px;
   font-family: DM Sans;
   border: none;
   border-radius: 20px;
   cursor: pointer;
-  width: 192px;
-  margin-top: 32px;
-  margin-left: 16px;
+  margin: 0 20px;
 }

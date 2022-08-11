@@ -5,8 +5,11 @@
 
 .PlusOne-options {
   display: flex;
-  justify-content: space-evenly;
+  justify-content: space-between;
   align-items: center;
+  width: 85%;
+  margin: 0 auto;
+  padding: 20px;
 }
 
 .PlusOne-info {
@@ -16,11 +19,12 @@
 
 .PlusOne-name {
   font-size: 16px;
-  padding-top: 5vh;
+  padding-top: 1vh;
 }
 
 .PlusOne-buttons {
   margin: 20px 0;
   display: flex;
-  justify-content: right;
+  flex-direction: column;
+  width: 100%;
 }

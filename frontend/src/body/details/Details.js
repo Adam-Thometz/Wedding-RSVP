@@ -20,7 +20,7 @@ const Details = () => {
       <section id='registry'>
         <h2>Registry</h2>
         <article>
-          Having our loved ones there is the best gift of all, but... if you'd like and are able to buy us a gift, <a href='https://www.myregistry.com/wedding-registry/adam-thometz-and-melody-acosta-bronx-ny/3406077'>check out our registry</a>. You can buy us a gift or contribute to our honeymoon fund!
+          Having our loved ones there is the best gift of all, but... if you'd like and are able to buy us a gift, <a href='https://www.myregistry.com/wedding-registry/adam-thometz-and-melody-acosta-bronx-ny/3406077'>check out our registry</a>. You can buy us a gift or contribute to our honeymoon fund! If you buy something for us, don't forget to return to the registry and mark that you bought it.
         </article>
       </section>
       <section id='RSVP'>

@@ -9,13 +9,17 @@ const IsAttending = () => {
   return (
     <article className='IsAttending'>
       <h3>You're in! We look forward to seeing you{plusOneFirstName ? ` and ${plusOneFirstName}` : ''} there!</h3>
-      <p> If anything changes, you can come back to this site and refill the form by March 1st! The reception is taking place on April 22nd, 7pm, at...</p>
+      <p> If anything changes, you can come back to this site and refill the form by March 1st!</p>
 
-      <address>
-        Jumel Terrace Books<br />
-        426 W 160th st<br />
-        New York, NY 10032
-      </address>
+      {guestInfo.firstName === 'Sample' ? <>
+        <p>The reception is taking place on April 22nd, 7pm, at...</p>
+
+        <address>
+          Jumel Terrace Books<br />
+          426 W 160th st<br />
+          New York, NY 10032
+        </address>
+      </> : null}
 
       <p>Other things to note:</p>
 

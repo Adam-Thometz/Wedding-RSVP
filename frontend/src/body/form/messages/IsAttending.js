@@ -3,6 +3,8 @@ import FormContext from '../../../_utils/FormContext';
 
 import './IsAttending.css';
 
+import address from '../../../_utils/address';
+
 const IsAttending = () => {
   const { guestInfo } = useContext(FormContext);
   const plusOneFirstName = guestInfo.plusOne.split(' ')[0];
@@ -14,11 +16,7 @@ const IsAttending = () => {
       {guestInfo.firstName === 'Sample' ? null : <>
         <p>The reception is taking place on April 22nd, 7pm, at...</p>
 
-        <address>
-          Jumel Terrace Books<br />
-          426 W 160th st<br />
-          New York, NY 10032
-        </address>
+        {address}
       </>}
 
       <p>Other things to note:</p>

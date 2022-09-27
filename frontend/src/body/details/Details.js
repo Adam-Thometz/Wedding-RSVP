@@ -6,15 +6,15 @@ const Details = () => {
   return (
     <article>
       <section>
-        <h2>Correction</h2>
+        <h2>Wedding Postponement</h2>
         <article>
-          The invite says to RSVP by August 1st. Hopefully you've gathered that that's incorrect, since you got the invite after August 1st! Now, RSVP by September 1st!
+          Due to family illness, we have decided to postpone the wedding. The new date will be April 22nd, 2023.
         </article>
       </section>
       <section id="details">
         <h2>Details</h2>
         <article>
-          In numerology, 22 is considered to be the most powerful number. It is a “master number” which represents the fulfillment of one’s greatest aspirations. To ring in that positive energy, we are inviting our most beloved friends and family to celebrate our marriage on 10/22/2022. So, put on your glad rags and sparkly outfit and come to our roaring 20’s themed cocktail wedding reception! The actual wedding will take place in a small ceremony but we definitely want to celebrate this special event with everyone else during our reception!
+          In numerology, 22 is considered to be the most powerful number. It is a “master number” which represents the fulfillment of one’s greatest aspirations. To ring in that positive energy, we are inviting our most beloved friends and family to celebrate our marriage on 04/22/2023. So, put on your glad rags and sparkly outfit and come to our roaring 20’s themed cocktail wedding reception! The actual wedding will take place in a small ceremony but we definitely want to celebrate this special event with everyone else during our reception!
         </article>
       </section>
       <section id='registry'>

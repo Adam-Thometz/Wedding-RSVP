@@ -9,7 +9,7 @@ const IsAttending = () => {
   return (
     <article className='IsAttending'>
       <h3>You're in! We look forward to seeing you{plusOneFirstName ? ` and ${plusOneFirstName}` : ''} there!</h3>
-      <p> If anything changes, you can come back to this site and refill the form by September 1st! The reception is taking place on October 22nd, 7pm, at...</p>
+      <p> If anything changes, you can come back to this site and refill the form by March 1st! The reception is taking place on April 22nd, 7pm, at...</p>
 
       <address>
         Jumel Terrace Books<br />
